@@ -13,6 +13,7 @@ export const MOODS = [
     experienceMessage: 'Your spirit is glowing with warmth. Celebrate this lightness of being, share your positive energy, and let this radiant frequency expand into every corner of your day.',
     particleType: 'bubbles',
     breathingPace: 3.5,
+    bgImage: '/backgrounds/happy.png',
     accent: {
       border: 'border-amber-300/60',
       bgSelected: 'bg-amber-400/20',
@@ -45,6 +46,7 @@ export const MOODS = [
     experienceMessage: 'Inhale stillness, exhale hurry. You are grounded in this quiet aquatic sanctuary. Allow the gentle rhythm of your breath to bring effortless clarity and deep serenity.',
     particleType: 'waves',
     breathingPace: 5.5,
+    bgImage: '/backgrounds/calm.png',
     accent: {
       border: 'border-emerald-300/60',
       bgSelected: 'bg-emerald-400/20',
@@ -77,6 +79,7 @@ export const MOODS = [
     experienceMessage: 'Sadness is a quiet invitation for tenderness. Treat yourself with deep compassion today. Just as rain nourishes the earth, gentle rest brings quiet renewal and strength.',
     particleType: 'mist',
     breathingPace: 6.0,
+    bgImage: '/backgrounds/sad.png',
     accent: {
       border: 'border-sky-300/60',
       bgSelected: 'bg-sky-400/20',
@@ -109,6 +112,7 @@ export const MOODS = [
     experienceMessage: 'Your anger carries potent protective energy. Instead of letting it scorch within, ground your feet, exhale the heat, and transmute this flame into clear, constructive power.',
     particleType: 'embers',
     breathingPace: 3.0,
+    bgImage: '/backgrounds/angry.png',
     accent: {
       border: 'border-rose-400/60',
       bgSelected: 'bg-rose-500/25',
@@ -141,6 +145,7 @@ export const MOODS = [
     experienceMessage: 'You have given so much of yourself. The world can pause while you restore. Soften your jaw, relax your shoulders, and sink into this velvety dusk stillness.',
     particleType: 'stars',
     breathingPace: 7.0,
+    bgImage: '/backgrounds/tired.png',
     accent: {
       border: 'border-purple-300/60',
       bgSelected: 'bg-purple-500/20',

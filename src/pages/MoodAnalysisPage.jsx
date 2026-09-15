@@ -184,7 +184,7 @@ export default function MoodAnalysisPage({
               </div>
 
               {/* Step labels */}
-              <div className={cn('w-full px-6 py-4 rounded-2xl border backdrop-blur-2xl', env.cardBorder, env.cardBg)}>
+              <div className={cn('w-full px-6 py-4 rounded-2xl border backdrop-blur-2xl animate-float-1', env.cardBorder, env.cardBg)}>
                 {PROCESSING_STEPS.map((step, i) => (
                   <motion.div
                     key={step}
@@ -222,12 +222,12 @@ export default function MoodAnalysisPage({
             >
               {/* Header pill */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-black/25 backdrop-blur-xl text-xs font-semibold text-white shadow-sm">
-                <Sparkles className="w-3.5 h-3.5" />
+                <Sparkles className="w-3.5 h-3.5 text-white" />
                 <span>Mood Analysis Complete</span>
               </div>
 
               {/* Main result card */}
-              <div className={cn('w-full rounded-3xl border backdrop-blur-2xl shadow-2xl p-6 sm:p-8', env.cardBorder, env.cardBg)}>
+              <div className={cn('w-full rounded-3xl border backdrop-blur-2xl shadow-2xl p-6 sm:p-8 animate-float-2', env.cardBorder, env.cardBg)}>
 
                 {/* Selected mood row */}
                 <div className="flex items-center gap-3 mb-6 pb-5 border-b border-white/10">
@@ -305,7 +305,7 @@ export default function MoodAnalysisPage({
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6 }}
-                  className={cn('w-full px-4 py-3 rounded-2xl border backdrop-blur-xl', env.cardBorder, env.cardBg)}
+                  className={cn('w-full px-4 py-3 rounded-2xl border backdrop-blur-xl animate-float-3', env.cardBorder, env.cardBg)}
                 >
                   <p className="text-xs text-white/50 uppercase tracking-wider font-semibold mb-1">Your Note</p>
                   <p className="text-sm text-white/80 italic leading-relaxed">

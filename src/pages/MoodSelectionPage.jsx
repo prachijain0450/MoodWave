@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Sparkles } from 'lucide-react';
 import MoodCard from '../components/MoodCard';
 import AnimatedBackground from '../components/AnimatedBackground';
+import MoodEnvironment from '../components/MoodEnvironment';
 import { MOODS } from '../utils/moods';
 
 export default function MoodSelectionPage({
@@ -13,7 +14,12 @@ export default function MoodSelectionPage({
 }) {
   return (
     <div className="min-h-screen flex flex-col justify-between relative overflow-x-hidden selection:bg-indigo-500/30 selection:text-indigo-200">
-      <AnimatedBackground />
+      {/* Dynamic mood background image when a mood is selected, fallback to neutral ambient */}
+      {selectedMood ? (
+        <MoodEnvironment mood={selectedMood} />
+      ) : (
+        <AnimatedBackground />
+      )}
 
       {/* Top Bar Navigation */}
       <header className="sticky top-0 z-40 w-full border-b border-white/[0.07] bg-[#06070d]/80 backdrop-blur-xl">
@@ -57,14 +63,18 @@ export default function MoodSelectionPage({
 
         {/* 6 Mood Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full max-w-4xl mb-8 sm:mb-12">
-          {MOODS.map((mood) => (
-            <MoodCard
-              key={mood.id}
-              mood={mood}
-              isSelected={selectedMood?.id === mood.id}
-              onSelect={onSelectMood}
-            />
-          ))}
+          {MOODS.map((mood, idx) => {
+            const floatClass = idx % 3 === 0 ? 'animate-float-1' : idx % 3 === 1 ? 'animate-float-2' : 'animate-float-3';
+            return (
+              <div key={mood.id} className={floatClass}>
+                <MoodCard
+                  mood={mood}
+                  isSelected={selectedMood?.id === mood.id}
+                  onSelect={onSelectMood}
+                />
+              </div>
+            );
+          })}
         </div>
 
         {/* Action & Feedback Drawer */}
@@ -77,7 +87,7 @@ export default function MoodSelectionPage({
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -10, scale: 0.98 }}
                 transition={{ duration: 0.3, ease: 'easeOut' }}
-                className="w-full p-5 sm:p-6 rounded-2xl bg-white/[0.04] border border-white/[0.12] backdrop-blur-xl flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 shadow-2xl"
+                className="w-full p-5 sm:p-6 rounded-2xl bg-white/[0.04] border border-white/[0.12] backdrop-blur-xl flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 shadow-2xl animate-float-1"
               >
                 <div className="text-center sm:text-left flex-1">
                   <div className="flex items-center justify-center sm:justify-start gap-2 mb-1.5">

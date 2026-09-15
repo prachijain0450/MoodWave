@@ -108,12 +108,12 @@ export default function NotePage({
             {/* Mood Mini Emblem */}
             <div
               className={cn(
-                'w-14 h-14 rounded-2xl flex items-center justify-center mb-6 border shadow-xl backdrop-blur-xl',
+                'w-14 h-14 rounded-2xl flex items-center justify-center mb-6 border shadow-xl backdrop-blur-xl animate-float-3',
                 env.cardBorder,
                 env.cardBg
               )}
             >
-              <span className="text-2xl">{currentMood.emoji}</span>
+              <span className="text-2xl select-none">{currentMood.emoji}</span>
             </div>
 
             {/* Heading */}
@@ -152,7 +152,7 @@ export default function NotePage({
             {/* Main Input Card */}
             <div
               className={cn(
-                'w-full rounded-3xl border backdrop-blur-2xl shadow-2xl p-6 sm:p-8 mb-6 transition-all duration-500',
+                'w-full rounded-3xl border backdrop-blur-2xl shadow-2xl p-6 sm:p-8 mb-6 transition-all duration-500 animate-float-1',
                 env.cardBorder,
                 env.cardBg
               )}

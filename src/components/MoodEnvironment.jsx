@@ -14,16 +14,33 @@ export default function MoodEnvironment({ mood }) {
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
-      {/* Full-Page Viewport Background Gradient with Smooth Crossfade */}
+      {/* Full-Page Viewport Background (Image or Gradient) with Smooth Crossfade */}
       <AnimatePresence mode="sync">
         <motion.div
-          key={`bg-${mood.id}`}
+          key={`bg-layer-${mood.id}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: 'easeInOut' }}
-          className={`absolute inset-0 bg-gradient-to-br ${env.bgBase}`}
-        />
+          transition={{ duration: 0.85, ease: 'easeInOut' }}
+          className="absolute inset-0 z-0 overflow-hidden"
+        >
+          {mood.bgImage ? (
+            <div className="relative w-full h-full">
+              {/* Full-screen cover background image */}
+              <img
+                src={mood.bgImage}
+                alt=""
+                className="w-full h-full object-cover object-center filter brightness-[0.70] contrast-[1.05]"
+              />
+              {/* Subtle dark tint & mood-colored ambient overlay to maintain text readability & glassmorphism */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${env.bgBase} opacity-65 mix-blend-multiply`} />
+              <div className="absolute inset-0 bg-black/40 backdrop-blur-[1.5px]" />
+            </div>
+          ) : (
+            /* Fallback to existing mood background (used by Energetic) */
+            <div className={`w-full h-full bg-gradient-to-br ${env.bgBase}`} />
+          )}
+        </motion.div>
       </AnimatePresence>
 
       {/* Primary Atmospheric Radiant Mesh (Top/Center) */}

@@ -56,7 +56,7 @@ export default function LandingPage({ onStartJourney }) {
 
         {/* Architectural Pillars / Feature Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mt-16 sm:mt-20 w-full text-left">
-          <div className="p-6 rounded-2xl bg-white/[0.025] border border-white/[0.07] backdrop-blur-md hover:bg-white/[0.045] hover:border-white/[0.15] hover:-translate-y-1 transition-all duration-300 shadow-md hover:shadow-indigo-500/5">
+          <div className="p-6 rounded-2xl bg-white/[0.025] border border-white/[0.07] backdrop-blur-md hover:bg-white/[0.045] hover:border-white/[0.15] hover:-translate-y-1 transition-all duration-300 shadow-md hover:shadow-indigo-500/5 animate-float-1">
             <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-4 text-indigo-400">
               <Sliders className="w-5 h-5" />
             </div>
@@ -66,7 +66,7 @@ export default function LandingPage({ onStartJourney }) {
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white/[0.025] border border-white/[0.07] backdrop-blur-md hover:bg-white/[0.045] hover:border-white/[0.15] hover:-translate-y-1 transition-all duration-300 shadow-md hover:shadow-violet-500/5">
+          <div className="p-6 rounded-2xl bg-white/[0.025] border border-white/[0.07] backdrop-blur-md hover:bg-white/[0.045] hover:border-white/[0.15] hover:-translate-y-1 transition-all duration-300 shadow-md hover:shadow-violet-500/5 animate-float-2">
             <div className="w-10 h-10 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center mb-4 text-violet-400">
               <Heart className="w-5 h-5" />
             </div>
@@ -76,7 +76,7 @@ export default function LandingPage({ onStartJourney }) {
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white/[0.025] border border-white/[0.07] backdrop-blur-md hover:bg-white/[0.045] hover:border-white/[0.15] hover:-translate-y-1 transition-all duration-300 shadow-md hover:shadow-cyan-500/5">
+          <div className="p-6 rounded-2xl bg-white/[0.025] border border-white/[0.07] backdrop-blur-md hover:bg-white/[0.045] hover:border-white/[0.15] hover:-translate-y-1 transition-all duration-300 shadow-md hover:shadow-cyan-500/5 animate-float-3">
             <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-4 text-cyan-400">
               <ShieldCheck className="w-5 h-5" />
             </div>

@@ -86,3 +86,45 @@
 .animate-wave-glow {
   animation: waveShift 10s ease-in-out infinite;
 }
+
+/* Subtle automatic floating animation for main visible cards and boxes */
+@keyframes floatSubtle1 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatSubtle2 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatSubtle3 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.animate-float-1 {
+  animation: floatSubtle1 6s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: floatSubtle2 7.2s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.animate-float-3 {
+  animation: floatSubtle3 5.4s ease-in-out infinite;
+  animation-delay: 1.2s;
+}

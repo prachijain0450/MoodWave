@@ -132,7 +132,7 @@ export default function MoodExperiencePage({
               {/* Inner Glowing Center Hub */}
               <div
                 className={cn(
-                  'relative w-28 h-28 sm:w-36 sm:h-36 rounded-3xl p-1 shadow-2xl backdrop-blur-2xl flex items-center justify-center border',
+                  'relative w-28 h-28 sm:w-36 sm:h-36 rounded-3xl p-1 shadow-2xl backdrop-blur-2xl flex items-center justify-center border animate-float-1',
                   env.cardBorder,
                   currentMood.accent.glow
                 )}
@@ -172,7 +172,7 @@ export default function MoodExperiencePage({
             {/* Personalized Restorative Atmosphere Card */}
             <div
               className={cn(
-                'w-full max-w-2xl p-6 sm:p-8 rounded-3xl border backdrop-blur-2xl shadow-2xl text-left mb-10 transition-all duration-500',
+                'w-full max-w-2xl p-6 sm:p-8 rounded-3xl border backdrop-blur-2xl shadow-2xl text-left mb-10 transition-all duration-500 animate-float-2',
                 env.cardBorder,
                 env.cardBg
               )}
